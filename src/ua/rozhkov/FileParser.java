@@ -30,11 +30,12 @@ public class FileParser {
 		if (fileString.indexOf(strCount) > 0) {
 			int tmpIndex = 0;
 			while (tmpIndex >= 0) {
-				tmpIndex = fileString.indexOf(strCount, tmpIndex + strCount.length());
+				tmpIndex = fileString.indexOf(strCount);
 				if (tmpIndex < 0) {
 					break;
 				} else {
 					count++;
+					fileString.delete(0, fileString.indexOf(strCount)+strCount.length());
 				}
 			}
 		} else {
