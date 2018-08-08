@@ -52,6 +52,7 @@ public class FileParser {
 			fileString.replace(fileString.indexOf(strSearch), fileString.indexOf(strSearch) + strSearch.length(), strReplace);
 		} else {
 			System.out.println("String not found!");
+			return;
 		}
 		try (FileWriter fileWriter = new FileWriter(new File(source))) {
 			fileWriter.write(fileString.toString());

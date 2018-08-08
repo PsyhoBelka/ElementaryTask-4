@@ -7,10 +7,12 @@ public class Main {
 		FileParser fileParser = new FileParser();
 		String sourceF = "./resources/search.txt";
 		fileParser.resetFile(sourceF);
-		System.out.println(fileParser.parseFile(sourceF, "Кто бы"));
-		fileParser.parseFile(sourceF, "Кто бы", "мама1");
-		System.out.println(fileParser.parseFile(sourceF, "мама1"));
-		fileParser.resetFile(sourceF);
+		String stringSearch="мама мыла";
+		String stringReplace="мама123";
+		System.out.println(fileParser.parseFile(sourceF, stringSearch));
+		fileParser.parseFile(sourceF, stringSearch,stringReplace);
+		System.out.println(fileParser.parseFile(sourceF, stringReplace));
+//		fileParser.resetFile(sourceF);
 	}
 
 }
